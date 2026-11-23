@@ -140,36 +140,14 @@ a.nw:hover b{text-decoration:underline 1px;text-underline-offset:4px}
 .cv li{display:grid;grid-template-columns:4.9em minmax(0,1fr);gap:10px;padding:3px 0}
 
 /* 연락 */
-.ct{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px 80px;align-items:start}
-.ctt h1{font-size:22px;line-height:1.35}
-.mail{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-top:28px;font-size:17px}
+.ct{max-width:640px}
+.ct h1{font-size:22px;line-height:1.35}
+.ctl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 32px;align-items:baseline;margin:40px 0 0;font-size:18px;line-height:1.5}
+.ctl dt{font-size:13px;color:var(--muted)}
+.ctl dd{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 16px;margin:0;min-height:40px}
+.ctl a{text-decoration:underline 1px;text-underline-offset:5px;overflow-wrap:anywhere}
 .copy{min-height:40px;padding:0;border:0;background:none;cursor:pointer;font-size:14px;color:var(--muted);text-decoration:underline 1px;text-underline-offset:4px}
 .copy:hover{color:var(--ink)}
-.ig{display:inline-block;margin-top:4px;text-decoration:underline 1px;text-underline-offset:4px}
-.partners{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 16px;margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;line-height:1.6}
-.partners dt{color:var(--muted)}
-.partners dd{margin:0}
-.ask h2{font-size:15px}
-.ask p.note{margin-top:4px;font-size:14px;color:var(--muted)}
-.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px;margin-top:18px}
-.fld{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
-.fld.wide{grid-column:1/-1}
-.fld input,.fld textarea{width:100%;min-height:46px;padding:10px 12px;border:1px solid #d4d4d4;border-radius:0;background:#fff;color:var(--ink);font:400 16px/1.5 var(--f)}
-.fld textarea{min-height:110px;resize:vertical}
-.fld input:focus,.fld textarea:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
-.uses{grid-column:1/-1;margin:0;padding:0;border:0}
-.uses legend{padding:0;margin-bottom:4px;font-size:13px;color:var(--muted)}
-.uses div{display:flex;flex-wrap:wrap;gap:0 22px}
-.uses label{display:inline-flex;align-items:center;gap:8px;min-height:40px;cursor:pointer;font-size:15px}
-.uses input{width:17px;height:17px;margin:0;accent-color:var(--ink)}
-.go{margin-top:22px;min-height:46px;padding:0 22px;border:1px solid var(--ink);border-radius:0;background:none;color:var(--ink);cursor:pointer;font-size:15px}
-.go:hover{background:var(--ink);color:#fff}
-.err{margin-top:10px;font-size:14px;color:#b3261e}
-.out{margin-top:20px;padding:18px;border:1px solid #d4d4d4}
-.out pre{margin:10px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.6 var(--f)}
-.out .btns{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:14px}
-.out .btns a,.out .btns button{display:inline-flex;align-items:center;min-height:44px;padding:0;border:0;background:none;cursor:pointer;font-size:15px;text-decoration:underline 1px;text-underline-offset:5px}
-.out .btns a:hover,.out .btns button:hover{color:var(--muted)}
 
 
 /* 아래 */
@@ -214,7 +192,6 @@ a.nw:hover b{text-decoration:underline 1px;text-underline-offset:4px}
 .nw{grid-template-columns:4.8em minmax(0,1fr)}
 .nw .cat{grid-column:2;grid-row:1}
 .nw .tx{grid-column:1/-1}
-.fields{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:699px){
 .hgrid{gap:32px 16px}
@@ -515,33 +492,13 @@ a.nw:hover b{text-decoration:underline 1px;text-underline-offset:4px}
 
 <section class="view" id="v-contact" data-view="contact" hidden>
   <div class="ct">
-    <div class="ctt">
-      <div class="ttl"><h1>Contact</h1><p class="tgl" role="group" aria-label="Description language"><button type="button" data-set-lang="en" lang="en">EN</button><button type="button" data-set-lang="ko" lang="ko">KO</button></p></div>
-      <p class="mail"><a href="mailto:lyn5361@daum.net">lyn5361@daum.net</a><button class="copy" id="copy" type="button" data-t="Copy address">Copy address</button></p>
-      <p><a class="ig" href="https://www.instagram.com/202twozerotwo/">Instagram @202twozerotwo</a></p>
-      <dl class="partners"><dt><span class="ko" lang="ko">함께한 곳</span><span class="en" lang="en">Worked with</span></dt><dd><span class="ko" lang="ko">국립아시아문화전당, 송파문화재단, 코발트사회적협동조합, 한국예술인복지재단, 한국독립애니메이션협회</span><span class="en" lang="en">Asia Culture Center, Songpa Cultural Foundation, Cobalt Social Cooperative, Korean Artists Welfare Foundation, Korea Independent Animation Filmmakers Association</span></dd><dt><span class="ko" lang="ko">상영·방영</span><span class="en" lang="en">Screened</span></dt><dd><span class="ko" lang="ko">키노 아테네 국제 독립영화제, SBS 애니갤러리, 한국영상자료원</span><span class="en" lang="en">Kino Athens International Independent Film Festival, SBS Ani Gallery, Korean Film Archive</span></dd></dl>
-    </div>
-    <form class="ask" id="ask" novalidate>
-        <h2>Ask about a project</h2>
-        <p class="note">Fill this in and the page will prepare an email for you to send. Nothing is sent from this page.</p>
-        <div class="fields">
-          <label class="fld"><span>Name</span><input id="f-name" name="name" type="text" autocomplete="name" required></label>
-          <label class="fld"><span>Brand or organization</span><input id="f-org" name="org" type="text" autocomplete="organization"></label>
-          <label class="fld wide"><span>Your email</span><input id="f-mail" name="mail" type="email" autocomplete="email" required></label>
-          <label class="fld wide"><span>What is the project?</span><textarea id="f-what" name="what" required placeholder="e.g. three illustrations for an autumn packaging line"></textarea></label>
-          <fieldset class="uses"><legend>Where will it be used?</legend><div><label for="u-print"><input id="u-print" type="checkbox" name="use" value="print" data-en="Print">Print</label><label for="u-goods"><input id="u-goods" type="checkbox" name="use" value="goods" data-en="Products">Products</label><label for="u-book"><input id="u-book" type="checkbox" name="use" value="book" data-en="Publishing">Publishing</label><label for="u-web"><input id="u-web" type="checkbox" name="use" value="web" data-en="Online">Online</label><label for="u-space"><input id="u-space" type="checkbox" name="use" value="space" data-en="Space">Space</label></div></fieldset>
-          <label class="fld"><span>Timeline</span><input id="f-when" name="when" type="text" placeholder="e.g. launch in March 2027"></label>
-          <label class="fld"><span>Budget range</span><input id="f-budget" name="budget" type="text" placeholder="e.g. USD 2,000–3,500"></label>
-          <label class="fld wide"><span>Reference link (optional)</span><input id="f-ref" name="ref" type="url" inputmode="url"></label>
-        </div>
-        <button class="go" type="submit">Prepare the email</button>
-        <p class="err" id="ask-err" role="alert" hidden></p>
-        <div class="out" id="ask-out" hidden>
-          <p><b>To</b> lyn5361@daum.net</p>
-          <pre id="ask-text"></pre>
-          <div class="btns"><button type="button" id="ask-copy" data-t="Copy text">Copy text</button><a id="ask-mail" href="mailto:lyn5361@daum.net">Open in your mail app</a></div>
-        </div>
-      </form>
+    <h1>Contact</h1>
+    <dl class="ctl">
+      <dt>Email</dt>
+      <dd><a href="mailto:lyn5361@daum.net">lyn5361@daum.net</a><button class="copy" id="copy" type="button" data-t="Copy">Copy</button></dd>
+      <dt>Instagram</dt>
+      <dd><a href="https://www.instagram.com/202twozerotwo/">@202twozerotwo</a></dd>
+    </dl>
   </div>
 </section>
 
@@ -683,30 +640,11 @@ a.nw:hover b{text-decoration:underline 1px;text-underline-offset:4px}
     applyLang();
   });
 
-  /* 협업 문의: 보낼 메일을 만들어 준다 */
-  const ask = $('#ask'), askOut = $('#ask-out'), askErr = $('#ask-err'), askText = $('#ask-text');
-  const t = { head: '[Project inquiry]', name: 'Name', org: 'Brand or organization', mail: 'Reply to', what: 'Project', uses: 'Usage', when: 'Timeline', budget: 'Budget range', ref: 'Reference', miss: 'Please fill in your name, your email and the project.', bad: 'Please check the email address.' };
-  ask.addEventListener('submit', e => {
-    e.preventDefault();
-    const v = id => ($('#f-' + id).value || '').trim();
-    askErr.hidden = true;
-    if (!v('name') || !v('mail') || !v('what')) { askErr.textContent = t.miss; askErr.hidden = false; return; }
-    if (!$('#f-mail').checkValidity()) { askErr.textContent = t.bad; askErr.hidden = false; return; }
-    const uses = $$('.uses input:checked').map(i => i.dataset.en).join(', ');
-    const lines = [[t.name, v('name')], [t.org, v('org')], [t.mail, v('mail')], [t.what, v('what')], [t.uses, uses], [t.when, v('when')], [t.budget, v('budget')], [t.ref, v('ref')]]
-      .filter(([, x]) => x).map(([k, x]) => k + ': ' + x);
-    const subject = t.head + ' ' + (v('org') || v('name'));
-    askText.textContent = subject + '\n\n' + lines.join('\n');
-    $('#ask-mail').href = 'mailto:lyn5361@daum.net?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
-    askOut.hidden = false;
-    askOut.scrollIntoView({ block: 'nearest' });
-  });
   const copyText = (btn, text) => {
     const done = x => { btn.textContent = x; setTimeout(() => { btn.textContent = btn.dataset.t; }, 1800); };
     try { navigator.clipboard.writeText(text).then(() => done('Copied'), () => done('Could not copy')); }
     catch (err) { done('Could not copy'); }
   };
-  $('#ask-copy').addEventListener('click', e => copyText(e.currentTarget, 'To: lyn5361@daum.net\n' + askText.textContent));
   $('#copy').addEventListener('click', e => copyText(e.currentTarget, 'lyn5361@daum.net'));
 
   applyLang();
